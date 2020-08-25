@@ -1,0 +1,28 @@
+{{> header}}
+
+{{#if email}}
+
+<div class="content">
+    {{#each categories}}
+
+    <section class="{{class}}">
+        <h2>{{category}}</h2>
+        <div class="articles">
+            {{#if articles}}
+
+            {{#each articles}}
+            {{> article}}
+            {{/each}}
+
+            {{else}}
+            <h3 class="no-articles">No articles yet</h3>
+            {{/if}}
+        </div>
+    </section>
+
+    {{/each}}
+</div>
+
+{{/if}}
+
+{{> footer}}
